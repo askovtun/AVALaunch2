@@ -6,5 +6,5 @@ RUN apk update --no-cache && apk add git
 
 ENTRYPOINT ["git","clone"]
 
-CMD ["https://github.com/askovtun/AVALaunch2/new_file.txt"]
+CMD ["https://github.com/askovtun/AVALaunch2.git"]
 
