@@ -4,6 +4,8 @@ MAINTAINER Andrii Kovtun <askovtun@gmail.com>
 
 RUN apk update --no-cache && apk add git
 
+WORKDIR /data
+
 ENTRYPOINT ["git","clone"]
 
 CMD ["https://github.com/askovtun/AVALaunch2.git"]
