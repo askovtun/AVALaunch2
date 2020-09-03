@@ -1,3 +1,3 @@
 #!/bin/bash
-echo $display_name >> /usr/share/nginx/html/index.html
+echo $MY_NAME >> /usr/share/nginx/html/index.html
 nginx -g 'daemon off;'

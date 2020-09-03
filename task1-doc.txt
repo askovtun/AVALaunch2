@@ -1,0 +1,4 @@
+docker run -v ${PWD}/git-clone:/data alpine-git:1.0 https://github.com/zibenua/homeworks.git
+
+
+
