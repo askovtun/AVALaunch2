@@ -8,9 +8,11 @@ MAINTAINER Andrii Kovtun <askovtun@gmail.com>
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY index.html  /usr/share/nginx/html
 
-ENV MY_NAME Nobody
+ENV MY_NAME Andrii
 
 COPY ./entrypoint.sh /tmp
 RUN chmod u+x /tmp/entrypoint.sh
-ENTRYPOINT ["/tmp/entrypoint.sh"]
+ENTRYPOINT ["./entrypoint.sh"]
+
+
 
