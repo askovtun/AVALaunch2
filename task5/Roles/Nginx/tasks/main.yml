@@ -1,10 +1,7 @@
----
-- hosts: nodes
-  tasks:
     - name: Install nginx
       become: yes
-        yum: pkg=nginx state=installed
-        tags: installig
+      yum: pkg=nginx state=installed
+      tags: installig
 
     - name: Generate nginx.conf
       template:
