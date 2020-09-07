@@ -1,0 +1,27 @@
+    - name: Install nginx
+      become: yes
+      yum: pkg=nginx state=installed
+      tags: installig
+
+    - name: Generate nginx.conf
+      template:
+           src: /root/AVALaunch/task5/Roles/Nginx/templates/nginx.conf
+           dest: /etc/nginx/nginx.conf
+           mode: '0644'
+      tags: conf
+      notify:
+           Restart nginx
+
+    - name: enable service httpd and ensure it is not masked
+      systemd:
+           name: nginx
+           enabled: yes
+           masked: no
+      tags: check
+
+    - name: Make sure a service is running
+      systemd:
+           state: started
+           name: nginx
+      tags: check
+
