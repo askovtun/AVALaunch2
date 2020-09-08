@@ -1,0 +1,14 @@
+FROM  nginx:latest
+
+MAINTAINER Andrii Kovtun <askovtun@gmail.com>
+
+COPY index.html  /usr/share/nginx/html
+
+ENV MY_NAME Andrii
+
+COPY ./entrypoint.sh /tmp
+
+RUN chmod u+x /tmp/entrypoint.sh
+
+ENTRYPOINT ["./entrypoint.sh"]
+
